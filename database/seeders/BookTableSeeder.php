@@ -18,6 +18,13 @@ class BookTableSeeder extends Seeder
             'title' => '1984',
             'isbn' => 9745587686,
             'price' => 12.50,
+            'author_id' => 1,
+        ));
+
+        Book::create(array(
+            'title' => 'The Shining',
+            'isbn' => 9780385121675,
+            'price' => 12.50,
             'author_id' => 2,
         ));
 
