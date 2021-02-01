@@ -12,12 +12,16 @@ class TrustProxies extends Middleware
      *
      * @var array|string|null
      */
-    protected $proxies;
+    protected $proxies = '*'; //heroku added = '*'
 
     /**
      * The headers that should be used to detect proxies.
      *
      * @var int
      */
-    protected $headers = Request::HEADER_X_FORWARDED_ALL;
+
+    // added heroku
+    protected $headers = Request::HEADER_X_FORWARDED_AWS_ELB;
+
+    //protected $headers = Request::HEADER_X_FORWARDED_ALL;
 }
